@@ -742,3 +742,27 @@ section *::after {
   }
 }
 
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+
+.project-tech span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border: 1px solid rgba(0, 217, 255, 0.25);
+  border-radius: 7px;
+  background: rgba(0, 217, 255, 0.05);
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.project-tech i {
+  font-size: 16px;
+}
+
+
