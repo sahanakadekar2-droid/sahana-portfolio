@@ -283,3 +283,252 @@ footer {
     color: #cbd5e1;
     line-height: 1.7;
 }
+
+/* ===== PORTFOLIO DESIGN UPGRADE ===== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+.hero {
+    padding: 70px 7%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.hero-greeting,
+.section-label {
+    color: #38bdf8;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 24px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    margin-bottom: 24px;
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.16);
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+    color: #f1f5f9;
+}
+
+.hero h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    color: #38bdf8;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    max-width: 760px;
+    line-height: 1.8;
+    color: #dbe4f0;
+    font-size: 17px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 22px;
+    border: 1px solid #38bdf8;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #071426;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s ease,
+                background 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.btn-outline {
+    background: transparent;
+    color: #38bdf8;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(56, 189, 248, 0.18);
+}
+
+.btn-outline:hover {
+    background: #38bdf8;
+    color: #071426;
+}
+
+/* ===== PROJECTS SECTION ===== */
+
+.projects-section {
+    padding: 85px 7%;
+    background: rgba(5, 12, 26, 0.25);
+}
+
+.section-heading {
+    max-width: 1100px;
+    margin: 0 auto 36px;
+}
+
+.section-heading h2 {
+    font-size: clamp(32px, 4vw, 44px);
+    color: #f1f5f9;
+    margin: 0 0 12px;
+}
+
+.section-heading > p:last-child {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.project-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, 280px), 360px)
+    );
+    gap: 24px;
+}
+
+.project-card {
+    padding: 28px;
+    border: 1px solid rgba(56, 189, 248, 0.25);
+    border-radius: 16px;
+    background: linear-gradient(
+        145deg,
+        rgba(24, 42, 68, 0.95),
+        rgba(12, 24, 43, 0.95)
+    );
+    transition: transform 0.25s ease,
+                border-color 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.project-icon {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.project-category {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #38bdf8;
+    font-weight: 700;
+}
+
+.project-card h3 {
+    font-size: 25px;
+    color: #f8fafc;
+    margin: 12px 0;
+}
+
+.project-card > p:not(.project-category) {
+    color: #cbd5e1;
+    line-height: 1.8;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 20px 0;
+}
+
+.project-tags span {
+    padding: 7px 10px;
+    border-radius: 6px;
+    background: rgba(56, 189, 248, 0.1);
+    color: #7dd3fc;
+    font-size: 12px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #38bdf8;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== MOBILE RESPONSIVENESS ===== */
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: auto;
+        padding: 55px 6% 65px;
+    }
+
+    .profile-photo {
+        width: 125px;
+        height: 125px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    .projects-section {
+        padding: 60px 6%;
+    }
+
+    .project-card {
+        padding: 23px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .btn,
+    .project-card {
+        transition: none;
+    }
+}
