@@ -797,32 +797,40 @@ section *::after {
 /* Fix navigation on mobile screens */
 
 
+
 @media screen and (max-width: 600px) {
   header.navbar {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 8px;
-    width: 100%;
-    box-sizing: border-box;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    gap: 4px;
+    padding: 10px 6px;
+  }
+
+  header.navbar .logo {
+    display: none;
   }
 
   header.navbar nav {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10px 14px;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between;
+    gap: 0;
     width: 100%;
+    min-width: 0;
   }
 
   header.navbar nav a {
-    white-space: nowrap;
-    font-size: 12px;
+    display: inline-block;
+    white-space: nowrap !important;
+    font-size: 9px !important;
+    padding: 0 2px;
+    flex-shrink: 1;
   }
 }
+
 
 
 
