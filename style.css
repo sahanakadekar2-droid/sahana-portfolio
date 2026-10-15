@@ -766,3 +766,45 @@ html {
     }
 }
 
+/* Final project card alignment */
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.project-card {
+    width: 100%;
+    max-width: 720px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.project-description {
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+.project-footer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.project-footer-note {
+    color: #94a9c4;
+    font-size: 13px;
+}
+
+@media (max-width: 600px) {
+    .project-card {
+        padding: 22px;
+    }
+
+    .project-description {
+        font-size: 15px;
+    }
+}
+
+
